@@ -7,6 +7,11 @@ const app = express();
 // Middleware to parse incoming JSON requests
 app.use(express.json());
 
+// ✅ Root route to allow homepage rendering on Render
+app.get('/', (req, res) => {
+    res.send('Welcome to Cost Manager API!');
+});
+
 // Import route handlers
 const userRoutes = require('./routes/userRoutes');
 const costRoutes = require('./routes/costRoutes');
