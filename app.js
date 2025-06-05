@@ -22,7 +22,7 @@ const aboutRoutes = require('./routes/aboutRoutes');
  * Example endpoints:
  * GET /api/users/:id
  */
-//app.use('/api/users', userRoutes);
+app.use('/api/users', userRoutes);
 
 /**
  * Mount cost-related routes under /api
@@ -30,13 +30,12 @@ const aboutRoutes = require('./routes/aboutRoutes');
  * POST /api/add
  * GET /api/report
  */
-
-//app.use('/api', costRoutes);
+app.use('/api', costRoutes);
 
 /**
  * Mount about-related routes under /api/about
  */
-//app.use('/api/about', aboutRoutes);
+app.use('/api/about', aboutRoutes);
 
 const PORT = process.env.PORT || 3000;
 
