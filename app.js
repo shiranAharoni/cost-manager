@@ -7,7 +7,7 @@ const app = express();
 // Middleware to parse incoming JSON requests
 app.use(express.json());
 
-// ✅ Root route to allow homepage rendering on Render
+//  Root route to allow homepage rendering on Render
 app.get('/', (req, res) => {
     res.send('Welcome to Cost Manager API!');
 });
@@ -22,7 +22,7 @@ const aboutRoutes = require('./routes/aboutRoutes');
  * Example endpoints:
  * GET /api/users/:id
  */
-app.use('/api/users', userRoutes);
+//app.use('/api/users', userRoutes);
 
 /**
  * Mount cost-related routes under /api
@@ -30,12 +30,13 @@ app.use('/api/users', userRoutes);
  * POST /api/add
  * GET /api/report
  */
-app.use('/api', costRoutes);
+
+//app.use('/api', costRoutes);
 
 /**
  * Mount about-related routes under /api/about
  */
-app.use('/api/about', aboutRoutes);
+//app.use('/api/about', aboutRoutes);
 
 const PORT = process.env.PORT || 3000;
 
